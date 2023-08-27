@@ -27,8 +27,12 @@
     button {
         margin: 23px;
         padding: 8px;
+        width: 10vh;
         border-radius: 12px;
-        width: min-content;
+        background-color:lightskyblue;
+    }
+    button:hover{
+        background-color: cornflowerblue;
     }
 </style>
 
@@ -49,9 +53,11 @@
         let imageURL;
         function handleupload() {
             console.log("click");
+            
             const fileInput = document.getElementById('filepicker');
             const image = fileInput.files[0];
 
+            if(image){
             const formData = new FormData();
             formData.append("image_file", image);
             formData.append('size', 'auto');
@@ -78,6 +84,10 @@
                     console.error("Error:", error);
                 });
         }
+        else{
+            alert("Pls insert a file");
+        }
+    }
     </script>
 </body>
 
