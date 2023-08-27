@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    #lab{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 5vh;
+    }
+    #filepicker{
+        border:3px double black;
+        padding: 1vh;
+        margin-left: 2.5vh;
+    }
+    button{
+        margin:23px;
+        padding: 8px;
+        border-radius: 12px;
+        
+    }
+</style>
+<body>
+    <div class="main">
+        <form action="" method="post">
+            <label for="filepicker" id="lab">Select a File: </label><br>
+            <input type="file" id="filepicker" accept=".png, .jpg, .jpeg">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
